@@ -1,5 +1,13 @@
 :root {
 	--highlight-color: #ec5711;
+	--orange-color: #e45500;
+}
+
+.sectionHeader
+{
+	padding: 1rem 0;
+	font-size: 3rem;
+	line-height: 3.5rem;
 }
 
 .heroRow
@@ -117,3 +125,54 @@
 	margin: 1rem auto;
 	font-style: italic;
 }
+
+.studioInfoSection
+{
+	padding: 2rem 0;
+	background-color: #e5e5e5;
+}
+
+.studioInfo
+{
+	width: 60%;
+	margin: 0 auto;
+}
+
+.studioInfoTextBlock
+{
+	line-height: 2rem;
+	display: flex;
+}
+
+.studioInfoTextBlock > *
+{
+	flex: 1;
+}
+
+.studioInfoTextBlock ol
+{
+	padding: 0 0 0 1.2rem;
+}
+
+.studioInfoServicesList
+{
+	background-color: white;
+	border-radius: 1rem;
+	padding: 1rem;
+	font-size: 1.1rem;
+}
+
+.customSolutionsSection
+{
+	background-color: var(--orange-color);
+}
+
+.customSolutionSectionContent
+{
+	width: 60%;
+	margin: 0 auto;
+	padding: 3rem 0;
+	line-height: 2rem;
+	color: white;
+}
+

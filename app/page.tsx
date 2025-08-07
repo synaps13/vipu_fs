@@ -4,14 +4,14 @@ import { FaComputer, FaTruck, FaPlug, FaHandHoldingHeart } from "react-icons/fa6
 export default function Home() {
 	return (
 		<>
-			{Hero()}
-			{Testimonials()}
-			{About()}
-			{CustomSolutions()}
-			{Process()}
-			{Planning()}
-			{Contact()}
-			{Footer()}
+			<Hero />
+			<Testimonials />
+			<About />
+			<CustomSolutions />
+			<Process />
+			<Planning />
+			<Contact />
+			<Footer />
 		</>
 	);
 }
@@ -31,7 +31,7 @@ function Hero() {
 				</div>
 			</div>
 
-			<div className={styles.serviceIcons}>
+			<div className={`${styles.serviceIcons} ${styles.sectionSpacing}`}>
 				<div className={styles.serviceIconBlock}>
 					<FaComputer />
 					<p>Complete device setup</p>
@@ -58,7 +58,7 @@ function Hero() {
 
 function Testimonials() {
 	return (
-		<section className={styles.testimonials}>
+		<section className={`${styles.testimonials} ${styles.sectionSpacing}`}>
 			<h2>What clients say</h2>
 			<p>We place huge value on strong relationsps and have seen the benefit they bring to the businesses. Customer feedback is vital in helping us to get it right.</p>
 
@@ -80,12 +80,11 @@ function Testimonials() {
 	);
 }
 
-function About()
-{
+function About() {
 	return (
-		<section className={styles.studioInfoSection}>
+		<section className={`${styles.studioInfoSection} ${styles.sectionSpacing}`}>
 			<div className={styles.studioInfo}>
-				<h2 className={styles.sectionHeader}><span>01</span> About Our Studio</h2>
+				<h2 className={styles.sectionHeader}><span className={styles.highlighted}>01</span> About Our Studio</h2>
 				<div className={styles.studioInfoTextBlock}>
 					<p>We’re a versatile IT partner for businesses of all sizes—offering everything from hands-on tech setup and office relocations to consulting, software development, testing, and recruiting. Whether you need your devices up and running or expert support to grow your team and systems, we’re here to help you move forward with confidence.</p>
 					<div className={styles.studioInfoServicesList}>
@@ -105,10 +104,9 @@ function About()
 	);
 }
 
-function CustomSolutions()
-{
+function CustomSolutions() {
 	return (
-		<section className={styles.customSolutionsSection}>
+		<section className={`${styles.customSolutionsSection} ${styles.sectionSpacing}`}>
 			<div className={styles.customSolutionSectionContent}>
 				<h2 className={styles.sectionHeader}>Professionals or on your own?</h2>
 				<p>Choosing an external partner to plan, move, and set up your entire office or IT infrastructure is not just a convenience—it’s a strategic business decision. Our seasoned professionals bring years of expertise to streamline the entire process, ensuring faster implementation and minimizing costly disruptions. By leveraging our experience, you save valuable time and reduce final costs through efficient project management, proven methodologies, and access to trusted resources. Instead of diverting your internal team’s focus, you gain a reliable partner dedicated to delivering a smooth, hassle-free transition with maximum uptime. Invest smartly in your business’s future—partner with us for a seamless office and IT setup that accelerates productivity and keeps your budget on track.</p>
@@ -117,33 +115,34 @@ function CustomSolutions()
 	);
 }
 
-function Process()
-{
+function Process() {
 	return (
-		<section>
-			<h2 className={styles.sectionHeader}><span>02</span> Solution for your business</h2>
-			<div>
-				<p>We help businesses to innovate and grow by strengthening their ideas with our customized software solutions for multiple industries which includes healthcare, blockchain, education, insurance and many more.</p>
-				<p>Column 2</p>
+		<section className={`${styles.processSection} ${styles.sectionSpacing}`}>
+			<div className={styles.sectionBody}>
+				<h2 className={styles.sectionHeader}><span className={styles.highlighted}>02</span> Solution for your business</h2>
+				<div className={styles.twoColumnFlex}>
+					<p>We help companies relocate, set up, and scale their offices with ease. From electronics assembly and transport to hardware consultation, procurement, and staffing, we manage the entire technical side of your workspace. Our team ensures your office is equipped, connected, and ready to perform—backed by expert support and custom software when you need it.</p>
+					<p>Whether you're moving into a new space or upgrading your current one, we handle everything from hardware sourcing and installation to network setup and ongoing support. Need to rent or buy equipment? Looking for expert help with infrastructure or IT systems? We’ve got you covered—so your team can hit the ground running.</p>
+				</div>
 			</div>
 		</section>
 	);
 }
 
-function Planning()
-{
+function Planning() {
 	return (
-		<section>
-			<h2 className={styles.sectionHeader}><span>03</span> Descussing & planning</h2>
-			<p>We start by engaging with you to thoroughly understand your unique needs and goals. Together, we discuss the project scope, identify critical priorities, and uncover any potential challenges. This collaborative approach allows us to craft a detailed, tailored plan that aligns perfectly with your business objectives and ensures every step is clearly mapped out for smooth execution.</p>
+		<section className={`${styles.planningSection} ${styles.sectionSpacing}`}>
+			<div className={styles.sectionBody}>
+				<h2 className={styles.sectionHeader}><span className={styles.highlighted}>03</span> Planning and Execution</h2>
+				<p>We start by engaging with you to thoroughly understand your unique needs and goals. Together, we discuss the project scope, identify critical priorities, and uncover any potential challenges. This collaborative approach allows us to craft a detailed, tailored plan that aligns perfectly with your business objectives and ensures every step is clearly mapped out for smooth execution.</p>
+			</div>
 		</section>
 	);
 }
 
-function Contact()
-{
+function Contact() {
 	return (
-		<section>
+		<section className={`${styles.sectionBody} ${styles.sectionSpacing}`}>
 			<h2 className={styles.sectionHeader}>Looking to collaborate? <span>Get in touch to find out how we can help</span></h2>
 			<div>
 				<h3>Send us message with the form below or contact us with email or telegram messenger</h3>
@@ -158,8 +157,7 @@ function Contact()
 	);
 }
 
-function Footer()
-{
+function Footer() {
 	return (
 		<footer>
 		</footer>

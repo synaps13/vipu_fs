@@ -1,6 +1,8 @@
 :root {
 	--highlight-color: #ec5711;
 	--orange-color: #e45500;
+
+	font-size: 15pt;
 }
 
 .sectionHeader
@@ -8,6 +10,27 @@
 	padding: 1rem 0;
 	font-size: 3rem;
 	line-height: 3.5rem;
+}
+
+.highlighted
+{
+	color: var(--orange-color);
+}
+
+.text-lg {
+	font-size: 1.25rem;
+	line-height: 2;
+}
+
+.section {
+	width: 60%;
+	margin: 0 auto;
+	padding: 2rem 0;
+}
+
+.sectionSpacing
+{
+	padding: 3rem 0;
 }
 
 .heroRow
@@ -67,6 +90,8 @@
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	margin: 3rem 0;
+	width: 60%;
+  margin: auto;
 }
 
 .serviceIconBlock
@@ -144,6 +169,11 @@
 	display: flex;
 }
 
+.studioInfoTextBlock p:first-child
+{
+	padding: 1rem;
+}
+
 .studioInfoTextBlock > *
 {
 	flex: 1;
@@ -176,3 +206,31 @@
 	color: white;
 }
 
+.twoColumnFlex
+{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.twoColumnFlex > *
+{
+	width: 50%;
+}
+
+.sectionBody
+{
+	width: 60%;
+	margin: 0 auto;
+}
+
+.processSection
+{
+	background-image: url("/img/orange_bg.png");
+	color: white;
+	line-height: 2rem;
+}
+
+.planningSection
+{
+	line-height: 2rem;
+}

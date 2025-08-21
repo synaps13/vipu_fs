@@ -1,3 +1,8 @@
+"use client"
+
+import { useActionState, useEffect } from "react";
+import { useFormState } from "react-dom";
+import { sendEmail } from "./email/email";
 import styles from "./page.module.css";
 import { FaComputer, FaTruck, FaPlug, FaHandHoldingHeart } from "react-icons/fa6";
 
@@ -119,7 +124,7 @@ function Process() {
 	return (
 		<section className={`${styles.processSection} ${styles.sectionSpacing}`}>
 			<div className={styles.sectionBody}>
-				<h2 className={styles.sectionHeader}><span className={styles.highlighted}>02</span> Solution for your business</h2>
+				<h2 className={styles.sectionHeader}><span>02</span> Solution for your business</h2>
 				<div className={styles.twoColumnFlex}>
 					<p>We help companies relocate, set up, and scale their offices with ease. From electronics assembly and transport to hardware consultation, procurement, and staffing, we manage the entire technical side of your workspace. Our team ensures your office is equipped, connected, and ready to perform—backed by expert support and custom software when you need it.</p>
 					<p>Whether you're moving into a new space or upgrading your current one, we handle everything from hardware sourcing and installation to network setup and ongoing support. Need to rent or buy equipment? Looking for expert help with infrastructure or IT systems? We’ve got you covered—so your team can hit the ground running.</p>
@@ -142,16 +147,16 @@ function Planning() {
 
 function Contact() {
 	return (
-		<section className={`${styles.sectionBody} ${styles.sectionSpacing}`}>
+		<section className={`${styles.sectionBody} ${styles.sectionSpacing} ${styles.contactSection}`}>
 			<h2 className={styles.sectionHeader}>Looking to collaborate? <span>Get in touch to find out how we can help</span></h2>
-			<div>
-				<h3>Send us message with the form below or contact us with email or telegram messenger</h3>
-				<form>
-					<input />
-					<input />
-					<input />
-					<button>Send message</button>
-				</form>
+			<div className={styles.contactFormBlock}>
+				<h3>Send us message with the form below</h3>
+					<form action={sendEmail}>
+						<input type="text" id="name" name="name" placeholder="Enter your name here"/>
+						<input type="email" id="email" name="email" placeholder="Enter your email here"/>
+						<textarea name="message" id="message" cols={30} rows={10} placeholder="Write a bit about your problem here"></textarea>
+						<button type="submit">Send</button>
+					</form>
 			</div>
 		</section>
 	);

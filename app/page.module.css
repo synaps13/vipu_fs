@@ -1,6 +1,7 @@
 :root {
 	--highlight-color: #ec5711;
 	--orange-color: #e45500;
+	--dark-color: #292d33;
 
 	font-size: 15pt;
 }
@@ -120,6 +121,9 @@
 	justify-content: center;
 	text-align: center;
 	background-image: url("/img/gray_bg.png");
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .testimonials h2
@@ -222,6 +226,37 @@
 	width: 60%;
 	margin: 0 auto;
 }
+
+.contactSection
+{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.contactSection h2
+{
+	flex: 2 0 66%;
+}
+
+.contactSection .contactFormBlock
+{
+	flex: 1 0 33%;
+}
+
+.contactFormBlock form
+{
+	padding: 2rem;
+	background-color: var(--dark-color);
+	display: flex;
+	flex-direction: column;
+}
+
+.contactFormBlock form > *
+{
+	margin: 0.5rem 0;
+	padding: 1rem;	
+}
+
 
 .processSection
 {

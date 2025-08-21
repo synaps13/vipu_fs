@@ -151,12 +151,13 @@ function Contact() {
 			<h2 className={styles.sectionHeader}>Looking to collaborate? <span>Get in touch to find out how we can help</span></h2>
 			<div className={styles.contactFormBlock}>
 				<h3>Send us message with the form below</h3>
-					<form action={sendEmail}>
-						<input type="text" id="name" name="name" placeholder="Enter your name here"/>
-						<input type="email" id="email" name="email" placeholder="Enter your email here"/>
-						<textarea name="message" id="message" cols={30} rows={10} placeholder="Write a bit about your problem here"></textarea>
-						<button type="submit">Send</button>
-					</form>
+				<p>We're here to help. Tell us a little about your project and we'll be in touch.</p>
+				<form action={sendEmail}>
+					<input type="text" id="name" name="name" placeholder="Enter your name here"/>
+					<input type="email" id="email" name="email" placeholder="Enter your email here"/>
+					<textarea name="message" id="message" cols={30} rows={10} placeholder="Write a bit about your problem here"></textarea>
+					<button type="submit">Send</button>
+				</form>
 			</div>
 		</section>
 	);

@@ -243,12 +243,18 @@
 	flex: 1 0 33%;
 }
 
+.contactFormBlock h3, .contactFormBlock p
+{
+	padding: 1rem 0;
+}
+
 .contactFormBlock form
 {
 	padding: 2rem;
 	background-color: var(--dark-color);
 	display: flex;
 	flex-direction: column;
+	border-radius: 0.5rem;
 }
 
 .contactFormBlock form > *

@@ -229,6 +229,12 @@
 
 .contactSection
 {
+	background-color: var(--orange-color);
+	color: white;
+}
+
+.contactSectionBody
+{
 	display: flex;
 	flex-flow: row wrap;
 }
@@ -274,4 +280,16 @@
 .planningSection
 {
 	line-height: 2rem;
+}
+
+.footer
+{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+
+	padding: 4rem 2rem 5rem;
+
+	background-color: var(--dark-color);
+	color: white;
 }

@@ -1,7 +1,5 @@
 "use client"
 
-import { useActionState, useEffect } from "react";
-import { useFormState } from "react-dom";
 import { sendEmail } from "./email/email";
 import styles from "./page.module.css";
 import { FaComputer, FaTruck, FaPlug, FaHandHoldingHeart } from "react-icons/fa6";
@@ -29,7 +27,7 @@ function Hero() {
 					<h6>Who we are?</h6>
 					<h1>We Set Up Your Tech, <span>So You Don’t Have To</span></h1>
 					<p>Laptops, printers, Wi-Fi, servers, anything in between — we’ll get everything working smoothly while you focus on your team.</p>
-					<a className={styles.button} href="#">Let's chat about your IT problem</a>
+					<a className={styles.button} href="#contact">Let's chat about your IT problem</a>
 				</div>
 
 				<div className={styles.heroImgBlock}>
@@ -147,17 +145,19 @@ function Planning() {
 
 function Contact() {
 	return (
-		<section className={`${styles.sectionBody} ${styles.sectionSpacing} ${styles.contactSection}`}>
-			<h2 className={styles.sectionHeader}>Looking to collaborate? <span>Get in touch to find out how we can help</span></h2>
-			<div className={styles.contactFormBlock}>
-				<h3>Send us message with the form below</h3>
-				<p>We're here to help. Tell us a little about your project and we'll be in touch.</p>
-				<form action={sendEmail}>
-					<input type="text" id="name" name="name" placeholder="Enter your name here"/>
-					<input type="email" id="email" name="email" placeholder="Enter your email here"/>
-					<textarea name="message" id="message" cols={30} rows={10} placeholder="Write a bit about your problem here"></textarea>
-					<button type="submit">Send</button>
-				</form>
+		<section className={`${styles.sectionSpacing} ${styles.contactSection}`} id="contact">
+			<div className={`${styles.sectionBody} ${styles.contactSectionBody}`}>
+				<h2 className={styles.sectionHeader}>Looking to collaborate? <span>Get in touch to find out how we can help</span></h2>
+				<div className={styles.contactFormBlock}>
+					<h3>Send us message with the form below</h3>
+					<p>We're here to help. Tell us a little about your project and we'll be in touch.</p>
+					<form action={sendEmail}>
+						<input type="text" id="name" name="name" placeholder="Enter your name here"/>
+						<input type="email" id="email" name="email" placeholder="Enter your email here"/>
+						<textarea name="message" id="message" cols={30} rows={10} placeholder="Write a bit about your problem here"></textarea>
+						<button type="submit">Send</button>
+					</form>
+				</div>
 			</div>
 		</section>
 	);
@@ -165,7 +165,10 @@ function Contact() {
 
 function Footer() {
 	return (
-		<footer>
+		<footer className={styles.footer}>
+			<div>Needsleep OU</div>
+			<div>2025</div>
+			<div>another piece of info</div>
 		</footer>
 	);
 }

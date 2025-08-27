@@ -12,6 +12,7 @@
     "@react-email/components": "^0.5.1",
     "@react-email/render": "^1.2.1",
     "@sentry/nextjs": "^10.5.0",
+    "bulma": "^1.0.4",
     "create-email": "^1.2.2",
     "next": "15.3.1",
     "react": "^19.0.0",
@@ -27,6 +28,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
+    "sass": "^1.91.0",
     "typescript": "^5"
   }
 }

@@ -1,9 +1,9 @@
-:root {
-	--highlight-color: #ec5711;
-	--orange-color: #e45500;
-	--dark-color: #292d33;
-
-	font-size: 15pt;
+.hero
+{
+	background: url("/img/main-banner1.jpg") no-repeat 80% 50%;
+	background-size: auto;
+	background-size: cover;
+	padding: 120px 0px;
 }
 
 .sectionHeader
@@ -280,16 +280,4 @@
 .planningSection
 {
 	line-height: 2rem;
-}
-
-.footer
-{
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-between;
-
-	padding: 4rem 2rem 5rem;
-
-	background-color: var(--dark-color);
-	color: white;
 }

@@ -1,6 +1,6 @@
 # Refernce design
 
-- https://nicepage.com/landing-page/preview/website-design-firm-2625087?device=desktop
+- https://themefisher.com/demo?theme=orbitor-bulma
 - https://react-icons.github.io/react-icons/icons/fa6/
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).

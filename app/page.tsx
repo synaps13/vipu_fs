@@ -3,16 +3,18 @@
 import { sendEmail } from "./email/email";
 import styles from "./page.module.css";
 import { FaComputer, FaTruck, FaPlug, FaHandHoldingHeart } from "react-icons/fa6";
+import { IoMailOutline } from "react-icons/io5";
+import { FiPhone } from "react-icons/fi";
+import { Icon } from "@iconify/react";
 
 export default function Home() {
 	return (
 		<>
 			<Hero />
 			<Testimonials />
+			<Process />
 			<About />
 			<CustomSolutions />
-			<Process />
-			<Planning />
 			<Contact />
 			<Footer />
 		</>
@@ -23,36 +25,12 @@ function Hero() {
 	return (
 		<section className={`hero is-medium ${styles.hero}`}>
 			<div className="hero-body">
-				<p className="title">We Set Up Your Tech, <span>So You Don’t Have To</span></p>
-				<p className="subtitle">Laptops, printers, Wi-Fi, servers, anything in between — we’ll get everything working smoothly while you focus on your team.</p>
-				<a className="button is-primary is-light is-large" href="#contact">Let's chat about your IT problem</a>
-			</div>
-		</section>
-	);
-}
-
-function Services() {
-	return (
-		<section>
-			<div className={`${styles.serviceIcons} ${styles.sectionSpacing}`}>
-				<div className={styles.serviceIconBlock}>
-					<FaComputer />
-					<p>Complete device setup</p>
-				</div>
-
-				<div className={styles.serviceIconBlock}>
-					<FaTruck />
-					<p>Help with office relocation</p>
-				</div>
-
-				<div className={styles.serviceIconBlock}>
-					<FaPlug />
-					<p>Peripheral configuration</p>
-				</div>
-
-				<div className={styles.serviceIconBlock}>
-					<FaHandHoldingHeart />
-					<p>Easy to understand process</p>
+				<div className="columns">
+					<div className="column is-desktop is-6">
+						<p className="title">We Set Up Your Tech, <span>So You Don’t Have To</span></p>
+						<p className="subtitle">Laptops, printers, Wi-Fi, servers, anything in between — we’ll get everything working smoothly while you focus on your team.</p>
+						<a className="button is-primary is-light is-large" href="#contact">Let's chat about your IT problem</a>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -110,12 +88,12 @@ function Testimonials() {
 
 function About() {
 	return (
-		<section className={`${styles.studioInfoSection} ${styles.sectionSpacing}`}>
-			<div className={styles.studioInfo}>
-				<h2 className={styles.sectionHeader}><span className={styles.highlighted}>01</span> About Our Studio</h2>
-				<div className={styles.studioInfoTextBlock}>
-					<p>We’re a versatile IT partner for businesses of all sizes—offering everything from hands-on tech setup and office relocations to consulting, software development, testing, and recruiting. Whether you need your devices up and running or expert support to grow your team and systems, we’re here to help you move forward with confidence.</p>
-					<div className={styles.studioInfoServicesList}>
+		<section className="section">
+			<div className="container">
+				<h2 className="title">About Our Studio</h2>
+				<div className="columns is-8">
+					<p className="column">We’re a versatile IT partner for businesses of all sizes—offering everything from hands-on tech setup and office relocations to consulting, software development, testing, and recruiting. Whether you need your devices up and running or expert support to grow your team and systems, we’re here to help you move forward with confidence.</p>
+					<div className="column">
 						<ol>
 							<li>Electronics assembly/disassembly</li>
 							<li>Transportation</li>
@@ -145,24 +123,50 @@ function CustomSolutions() {
 
 function Process() {
 	return (
-		<section className={`${styles.processSection} ${styles.sectionSpacing}`}>
-			<div className={styles.sectionBody}>
-				<h2 className={styles.sectionHeader}><span>02</span> Solution for your business</h2>
-				<div className={styles.twoColumnFlex}>
-					<p>We help companies relocate, set up, and scale their offices with ease. From electronics assembly and transport to hardware consultation, procurement, and staffing, we manage the entire technical side of your workspace. Our team ensures your office is equipped, connected, and ready to perform—backed by expert support and custom software when you need it.</p>
-					<p>Whether you're moving into a new space or upgrading your current one, we handle everything from hardware sourcing and installation to network setup and ongoing support. Need to rent or buy equipment? Looking for expert help with infrastructure or IT systems? We’ve got you covered—so your team can hit the ground running.</p>
+		<section className={`section ${styles.processSection}`}>
+			<div className="container columns is-align-items-center">
+				<div className="column is-5">
+					<h2 className="title">We help you to make work easy</h2>
+					<p>We understand what your business means to you,your requirements considering trends.</p>
 				</div>
-			</div>
-		</section>
-	);
-}
 
-function Planning() {
-	return (
-		<section className={`${styles.planningSection} ${styles.sectionSpacing}`}>
-			<div className={styles.sectionBody}>
-				<h2 className={styles.sectionHeader}><span className={styles.highlighted}>03</span> Planning and Execution</h2>
-				<p>We start by engaging with you to thoroughly understand your unique needs and goals. Together, we discuss the project scope, identify critical priorities, and uncover any potential challenges. This collaborative approach allows us to craft a detailed, tailored plan that aligns perfectly with your business objectives and ensures every step is clearly mapped out for smooth execution.</p>
+				<div className="column is-7">
+					<div className="columns is-multiline">
+
+						<div className="column is-6">
+							<div className="box has-text-centered p-6 cardshadow">
+								<Icon icon="fa7-regular:truck" />
+								<h5 className="is-size-4 my-3">Relocation</h5>
+								<p>Moving office to a new place or starting anew</p>
+							</div>
+						</div>
+
+						<div className="column is-6">
+							<div className="box has-text-centered p-6 cardshadow">
+								<Icon icon="fa7-regular:building" />
+								<h5 className="is-size-4 my-3">Full office setup</h5>
+								<p>Hardware consultation and procurement</p>
+							</div>
+						</div>
+
+						<div className="column is-6">
+							<div className="box has-text-centered p-6 cardshadow">
+								<Icon icon="fa7-solid:network-wired" />
+								<h5 className="is-size-4 my-3">General support</h5>
+								<p>Configure office net and ensure workstations are running fine</p>
+							</div>
+						</div>
+
+						<div className="column is-6">
+							<div className="box has-text-centered p-6 cardshadow">
+								<Icon icon="fa7-solid:computer" />
+								<h5 className="is-size-4 my-3">IT solutions and DevOps</h5>
+								<p>Get you covered on the software side. Develop or support</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
 			</div>
 		</section>
 	);
@@ -191,7 +195,7 @@ function Contact() {
 							</div>
 							<div className="field">
 								<label className="label">Message</label>
-								<textarea className="input"  name="message" id="message" rows={10} placeholder="Write a bit about your problem here"></textarea>
+								<textarea className="input" name="message" id="message" rows={10} placeholder="Write a bit about your problem here"></textarea>
 							</div>
 							<button className="button is-primary" type="submit">Send</button>
 						</form>
@@ -208,7 +212,7 @@ function Footer() {
 			<div className="container">
 				<div className="columns is-multiline">
 					<div className="column is-3-widescreen is-6-tablet">
-						<h3 className="is-size-4 mb-4">NeedSleep</h3>
+						<h3 className="is-size-4 mb-4">NeedSleep OU</h3>
 						<p>Tempora dolorem voluptatum nam vero assumenda voluptate, facilis ad eos obcaecati tenetur veritatis eveniet distinctio.</p>
 					</div>
 
@@ -236,13 +240,13 @@ function Footer() {
 
 					<div className="column is-3-widescreen is-6-desktop is-6-tablet">
 						<h4 className="is-capitalized mb-4">Get in Touch</h4>
-						<h6><a href="tel:+23-345-67890"> <i className="ti-headphone-alt mr-3"></i>Support@megakit.com</a></h6>
-						<h6><a href="mailto:support@gmail.com"> <i className="ti-mobile mr-3"></i>+23-456-6588</a></h6>
+						<h6><a href="tel:+37256977936"><FiPhone /> +372 56 97 79 36</a></h6>
+						<h6><a href="mailto:needsleepou@gmail.com"><IoMailOutline /> needsleepou@gmail.com</a></h6>
 
 						<ul className="list-inline footer-socials mt-5">
-							<li className="list-inline-item"><a href="https://www.facebook.com/themefisher"><i className="ti-facebook mr-2"></i></a></li>
-							<li className="list-inline-item"><a href="https://twitter.com/themefisher"><i className="ti-twitter mr-2"></i></a></li>
-							<li className="list-inline-item"><a href="https://www.pinterest.com/themefisher/"><i className="ti-linkedin mr-2 "></i></a></li>
+							<li className="list-inline-item"><a href="#"><FaComputer /></a></li>
+							<li className="list-inline-item"><a href="#"><i className="ti-twitter mr-2"></i></a></li>
+							<li className="list-inline-item"><a href="#"><i className="ti-linkedin mr-2 "></i></a></li>
 						</ul>
 					</div>
 				</div>
@@ -251,7 +255,7 @@ function Footer() {
 					<div className="columns">
 						<div className="column is-6-widescreen">
 							<div className="copyright">
-								© Copyright Reserved to <span className="text-color">Orbitor</span> by <a href="https://themefisher.com/" target="_blank">Themefisher</a>
+								© Copyright Reserved to <span className="text-color">Orbitor</span> by <a href="#" target="_blank">R.R.</a>
 							</div>
 						</div>
 					</div>

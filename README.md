@@ -9,6 +9,10 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 - https://resend.com/emails
 
+# TODO
+
+- remove iconify in favor of react-icons
+
 ## Getting Started
 
 First, run the development server:

@@ -14,6 +14,7 @@ export default function Home() {
 			<Testimonials />
 			<Process />
 			<About />
+			<Stats />
 			<CustomSolutions />
 			<Contact />
 			<Footer />
@@ -39,12 +40,12 @@ function Hero() {
 
 function Testimonials() {
 	return (
-		<section className="section">
+		<section className="section py-6">
 			<div className="container">
 				<div className="columns is-desktop">
 					<div className="column is-8-desktop">
-						<p className="title">What they say about us</p>
-						<p className="subtitle">We place huge value on strong relationsps and have seen the benefit they bring to the businesses. Customer feedback is vital in helping us to get it right.</p>
+						<p className="title">What our clients say</p>
+						<p className="subtitle">Teams trust us to ship reliable DevOps, scalable back-ends, fast landing pages, rigorous testing, and rock-solid observability across AWS, GCP, Azure, and Oracle Cloud.</p>
 					</div>
 				</div>
 
@@ -52,31 +53,31 @@ function Testimonials() {
 					<div className="columns">
 						<div className="column is-4">
 							<div className="box">
-								<blockquote>We moved to a new location and needed everything—network, server, and devices—reinstalled. These guys handled it all smoothly over the weekend. Highly recommended!</blockquote>
+								<blockquote>They containerized our services, rolled out production-grade Kubernetes, and codified the stack with Terraform. Zero-downtime blue/green deploys and a clean CI/CD pipeline across multiple clouds have been a game changer.</blockquote>
 								<figure className="image is-64x64">
 									<img className="is-rounded" src="https://bulma.io/assets/images/placeholders/128x128.png" />
 								</figure>
-								<h4>Alex G., Office Manager</h4>
+								<h4>Maris V., CTO</h4>
 							</div>
 						</div>
 
 						<div className="column is-4">
 							<div className="box">
-								<blockquote>As a startup, we needed a quick and reliable tech setup without hiring in-house IT. This service was a lifesaver—easy communication, great support, and everything just worked.</blockquote>
+								<blockquote>They built our Node.js/TypeScript back-end with clear contracts, observability baked in, and load-tested it. Feature delivery accelerated after they set up automated testing and trunk-based CI.</blockquote>
 								<figure className="image is-64x64">
 									<img className="is-rounded" src="https://bulma.io/assets/images/placeholders/128x128.png" />
 								</figure>
-								<h4>Liis S., Co-Founder</h4>
+								<h4>Liis S., Co‑Founder</h4>
 							</div>
 						</div>
 
 						<div className="column is-4">
 							<div className="box">
-								<blockquote>We’re a small design studio with no in-house IT. When our office moved, they handled the tech side—computers, Wi-Fi, and backup drives—quickly and without hassle.</blockquote>
+								<blockquote>We needed a high-converting landing page fast. They delivered the design, content hooks, analytics, and performance optimizations in days—and integrated uptime/dashboards in Grafana and Datadog.</blockquote>
 								<figure className="image is-64x64">
 									<img className="is-rounded" src="https://bulma.io/assets/images/placeholders/128x128.png" />
 								</figure>
-								<h4>Jaanus K., Manager</h4>
+								<h4>Jaanus K., Marketing Lead</h4>
 							</div>
 						</div>
 					</div>
@@ -88,21 +89,47 @@ function Testimonials() {
 
 function About() {
 	return (
-		<section className="section">
+		<section className="section py-6">
 			<div className="container">
 				<h2 className="title">About Our Studio</h2>
 				<div className="columns is-8">
-					<p className="column">We’re a versatile IT partner for businesses of all sizes—offering everything from hands-on tech setup and office relocations to consulting, software development, testing, and recruiting. Whether you need your devices up and running or expert support to grow your team and systems, we’re here to help you move forward with confidence.</p>
+					<p className="column">We help teams ship faster and safer by combining modern DevOps with robust back-end engineering, high‑performing landing pages, and quality practices backed by deep observability. We work across AWS, GCP, Azure, and Oracle Cloud, with IaC, CI/CD, secure networking (VPN/VPS), and strong testing culture.</p>
 					<div className="column">
 						<ol>
-							<li>Electronics assembly/disassembly</li>
-							<li>Transportation</li>
-							<li>Hardware consultation</li>
-							<li>Hardware procurement</li>
-							<li>Hardware rent & purchase</li>
-							<li>Hardware/software setup & support</li>
-							<li>Software development</li>
+							<li>DevOps & Infra: Kubernetes, Terraform, CI/CD, VPN/VPS</li>
+							<li>Cloud: AWS, GCP, Azure, Oracle Cloud</li>
+							<li>Back‑end: Java, Scala, Kotlin, TypeScript, Node.js</li>
+							<li>Landing pages: design, build, analytics, SEO</li>
+							<li>Testing: automation, manual, acceptance</li>
+							<li>Observability: Grafana, Datadog, Elastic, Kafka</li>
 						</ol>
+					</div>
+				</div>
+			</div>
+		</section>
+	);
+}
+
+function Stats() {
+	return (
+		<section className="section py-6 has-text-white" style={{ backgroundColor: 'var(--orange-color)' }}>
+			<div className="container">
+				<div className="columns has-text-centered is-variable is-8">
+					<div className="column">
+						<p className="is-size-1 has-text-weight-bold">15+</p>
+						<p className="is-uppercase is-size-6">Years of experience</p>
+					</div>
+					<div className="column">
+						<p className="is-size-1 has-text-weight-bold">300+</p>
+						<p className="is-uppercase is-size-6">Automated deploys / mo</p>
+					</div>
+					<div className="column">
+						<p className="is-size-1 has-text-weight-bold">4</p>
+						<p className="is-uppercase is-size-6">Clouds supported</p>
+					</div>
+					<div className="column">
+						<p className="is-size-1 has-text-weight-bold">99.9%</p>
+						<p className="is-uppercase is-size-6">SLA uptime targets</p>
 					</div>
 				</div>
 			</div>
@@ -112,9 +139,9 @@ function About() {
 
 function CustomSolutions() {
 	return (
-		<section className={`${styles.customSolutionsSection} ${styles.sectionSpacing}`}>
-			<div className={styles.customSolutionSectionContent}>
-				<h2 className={styles.sectionHeader}>Professionals or on your own?</h2>
+		<section className="section py-6">
+			<div className="container">
+				<h2 className="title">Professionals or on your own?</h2>
 				<p>Choosing an external partner to plan, move, and set up your entire office or IT infrastructure is not just a convenience—it’s a strategic business decision. Our seasoned professionals bring years of expertise to streamline the entire process, ensuring faster implementation and minimizing costly disruptions. By leveraging our experience, you save valuable time and reduce final costs through efficient project management, proven methodologies, and access to trusted resources. Instead of diverting your internal team’s focus, you gain a reliable partner dedicated to delivering a smooth, hassle-free transition with maximum uptime. Invest smartly in your business’s future—partner with us for a seamless office and IT setup that accelerates productivity and keeps your budget on track.</p>
 			</div>
 		</section>
@@ -123,45 +150,45 @@ function CustomSolutions() {
 
 function Process() {
 	return (
-		<section className={`section ${styles.processSection}`}>
+		<section className={`section py-6 ${styles.processSection}`}>
 			<div className="container columns is-align-items-center">
 				<div className="column is-5">
-					<h2 className="title">We help you to make work easy</h2>
-					<p>We understand what your business means to you,your requirements considering trends.</p>
+					<h2 className="title">From code to cloud with confidence</h2>
+					<p>We take you from idea to reliable production with infrastructure as code, scalable services, measurable quality, and actionable dashboards.</p>
 				</div>
 
 				<div className="column is-7">
 					<div className="columns is-multiline">
 
 						<div className="column is-6">
-							<div className="box has-text-centered p-6 cardshadow">
-								<Icon icon="fa7-regular:truck" />
-								<h5 className="is-size-4 my-3">Relocation</h5>
-								<p>Moving office to a new place or starting anew</p>
+							<div className={`box has-text-centered p-6 ${styles.cardshadow}`}>
+								<Icon icon="fa7-solid:cloud" />
+								<h5 className="is-size-4 my-3">DevOps & Cloud</h5>
+								<p>Kubernetes, Terraform, secure networking, and CI/CD across AWS, GCP, Azure, Oracle.</p>
 							</div>
 						</div>
 
 						<div className="column is-6">
-							<div className="box has-text-centered p-6 cardshadow">
-								<Icon icon="fa7-regular:building" />
-								<h5 className="is-size-4 my-3">Full office setup</h5>
-								<p>Hardware consultation and procurement</p>
+							<div className={`box has-text-centered p-6 ${styles.cardshadow}`}>
+								<Icon icon="fa7-solid:server" />
+								<h5 className="is-size-4 my-3">Back‑end Engineering</h5>
+								<p>Java, Kotlin, TypeScript, Node.js with clean APIs, performance, and security.</p>
 							</div>
 						</div>
 
 						<div className="column is-6">
-							<div className="box has-text-centered p-6 cardshadow">
-								<Icon icon="fa7-solid:network-wired" />
-								<h5 className="is-size-4 my-3">General support</h5>
-								<p>Configure office net and ensure workstations are running fine</p>
+							<div className={`box has-text-centered p-6 ${styles.cardshadow}`}>
+								<Icon icon="fa7-regular:pen-to-square" />
+								<h5 className="is-size-4 my-3">Landing Pages</h5>
+								<p>Design, build, and optimize conversion with analytics and SEO baked in.</p>
 							</div>
 						</div>
 
 						<div className="column is-6">
-							<div className="box has-text-centered p-6 cardshadow">
-								<Icon icon="fa7-solid:computer" />
-								<h5 className="is-size-4 my-3">IT solutions and DevOps</h5>
-								<p>Get you covered on the software side. Develop or support</p>
+							<div className={`box has-text-centered p-6 ${styles.cardshadow}`}>
+								<Icon icon="fa7-solid:chart-line" />
+								<h5 className="is-size-4 my-3">Testing & Observability</h5>
+								<p>Automation, manual and acceptance testing; Grafana, Datadog, Elastic, Kafka.</p>
 							</div>
 						</div>
 
@@ -174,7 +201,7 @@ function Process() {
 
 function Contact() {
 	return (
-		<section className="section" id="contact">
+		<section className="section py-6" id="contact">
 			<div className="container">
 				<h2 className="title">Looking to collaborate?</h2>
 				<div className="columns">
@@ -211,43 +238,16 @@ function Footer() {
 		<footer className="footer">
 			<div className="container">
 				<div className="columns is-multiline">
-					<div className="column is-3-widescreen is-6-tablet">
+					<div className="column is-4-desktop is-6-tablet is-12-mobile">
 						<h3 className="is-size-4 mb-4">NeedSleep OU</h3>
-						<p>Tempora dolorem voluptatum nam vero assumenda voluptate, facilis ad eos obcaecati tenetur veritatis eveniet distinctio.</p>
+						<p>We are an outsourcing partner for modern software delivery. Our team handles end‑to‑end development, rigorous testing (automation, manual, acceptance), and DevOps—Kubernetes, Terraform, and CI/CD—so your product ships faster with higher reliability.</p>
 					</div>
 
-					<div className="column is-2-widescreen is-6-desktop is-6-tablet ml-auto">
-						<h4 className="is-capitalized mb-4">Company</h4>
-
-						<ul className="list-unstyled footer-menu lh-35">
-							<li><a href="#">About</a></li>
-							<li><a href="#">Services</a></li>
-							<li><a href="#">Team</a></li>
-							<li><a href="#">Contact</a></li>
-						</ul>
-					</div>
-
-					<div className="column is-3-widescreen is-6-desktop is-6-tablet">
-						<h4 className="is-capitalized mb-4">Support</h4>
-
-						<ul className="list-unstyled footer-menu lh-35">
-							<li><a href="#">Terms &amp; Conditions</a></li>
-							<li><a href="#">Privacy Policy</a></li>
-							<li><a href="#">Support</a></li>
-							<li><a href="#">FAQ</a></li>
-						</ul>
-					</div>
-
-					<div className="column is-3-widescreen is-6-desktop is-6-tablet">
+					<div className="column is-3-desktop is-offset-5-desktop is-6-tablet is-12-mobile">
 						<h4 className="is-capitalized mb-4">Get in Touch</h4>
 						<h6><a href="tel:+37256977936"><FiPhone /> +372 56 97 79 36</a></h6>
 						<h6><a href="mailto:needsleepou@gmail.com"><IoMailOutline /> needsleepou@gmail.com</a></h6>
 
-						<ul className="list-inline footer-socials mt-5">
-							<li className="list-inline-item"><a href="#"><FaComputer /></a></li>
-							<li className="list-inline-item"><a href="#"><i className="ti-twitter mr-2"></i></a></li>
-							<li className="list-inline-item"><a href="#"><i className="ti-linkedin mr-2 "></i></a></li>
-						</ul>
 					</div>
 				</div>
 
@@ -255,7 +255,7 @@ function Footer() {
 					<div className="columns">
 						<div className="column is-6-widescreen">
 							<div className="copyright">
-								© Copyright Reserved to <span className="text-color">Orbitor</span> by <a href="#" target="_blank">R.R.</a>
+								© Copyright Reserved to <span className="text-color">NeedSleep OU</span> by <a href="#" target="_blank">R.R.</a>
 							</div>
 						</div>
 					</div>

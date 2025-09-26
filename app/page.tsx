@@ -120,11 +120,11 @@ function Stats() {
 						<p className="is-uppercase is-size-6">Years of experience</p>
 					</div>
 					<div className="column">
-						<p className="is-size-1 has-text-weight-bold">300+</p>
-						<p className="is-uppercase is-size-6">Automated deploys / mo</p>
+						<p className="is-size-1 has-text-weight-bold">100+</p>
+						<p className="is-uppercase is-size-6">Technologies known</p>
 					</div>
 					<div className="column">
-						<p className="is-size-1 has-text-weight-bold">4</p>
+						<p className="is-size-1 has-text-weight-bold">5</p>
 						<p className="is-uppercase is-size-6">Clouds supported</p>
 					</div>
 					<div className="column">

@@ -17,9 +17,14 @@ export const sendEmail = async (formData: FormData) => {
 	}
 
 	const { data, error } = await resend.emails.send({
-		from: 'VIPU <onboarding@resend.dev>',
-		to: ['rahimgulov.rustam@gmail.com'],
-		subject: 'Form submission on vipu.ee',
+		from: 'VIPU <auto@sales.vipu.eu>',
+		to: ['needsleepou@gmail.com'],
+		cc: ['rahimgulov.rustam@gmail.com', 'stazis.sama@gmail.com'],
+		subject: 'Form submission on vipu.eu',
 		react: EmailTemplate({ name, email, message }),
 	});
+
+	if (error) {
+		console.error("There was a problem sending out an email", error.message)
+	}
 };

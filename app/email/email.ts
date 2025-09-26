@@ -16,7 +16,7 @@ export const sendEmail = async (formData: FormData) => {
 		return;
 	}
 
-	const { data, error } = await resend.emails.send({
+	const { error } = await resend.emails.send({
 		from: 'VIPU <auto@sales.vipu.eu>',
 		to: ['needsleepou@gmail.com'],
 		cc: ['rahimgulov.rustam@gmail.com', 'stazis.sama@gmail.com'],

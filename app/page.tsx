@@ -2,7 +2,6 @@
 
 import { sendEmail } from "./email/email";
 import styles from "./page.module.css";
-import { FaComputer, FaTruck, FaPlug, FaHandHoldingHeart } from "react-icons/fa6";
 import { IoMailOutline } from "react-icons/io5";
 import { FiPhone } from "react-icons/fi";
 import { Icon } from "@iconify/react";
@@ -28,9 +27,9 @@ function Hero() {
 			<div className="hero-body">
 				<div className="columns">
 					<div className="column is-desktop is-6">
-						<p className="title">We Set Up Your Tech, <span>So You Don’t Have To</span></p>
-						<p className="subtitle">Laptops, printers, Wi-Fi, servers, anything in between — we’ll get everything working smoothly while you focus on your team.</p>
-						<a className="button is-primary is-light is-large" href="#contact">Let's chat about your IT problem</a>
+						<p className="title">We Set Up Your Tech, <span>So You Don&apos;t Have To</span></p>
+						<p className="subtitle">Laptops, printers, Wi-Fi, servers, anything in between — we&apos;ll get everything working smoothly while you focus on your team.</p>
+						<a className="button is-primary is-light is-large" href="#contact">Let&apos;s chat about your IT problem</a>
 					</div>
 				</div>
 			</div>
@@ -171,7 +170,7 @@ function Process() {
 						<div className="column is-6">
 							<div className={`box has-text-centered p-6 ${styles.cardshadow}`}>
 								<Icon icon="fa7-solid:server" />
-								<h5 className="is-size-4 my-3">Back‑end Engineering</h5>
+								<h5 className="is-size-4 my-3">Back-end Engineering</h5>
 								<p>Java, Kotlin, TypeScript, Node.js with clean APIs, performance, and security.</p>
 							</div>
 						</div>
@@ -207,7 +206,7 @@ function Contact() {
 				<div className="columns">
 					<div className="column">
 						<h3>Send us message with the form below</h3>
-						<p>We're here to help. Tell us a little about your project and we'll be in touch.</p>
+						<p>We&apos;re here to help. Tell us a little about your project and we&apos;ll be in touch.</p>
 					</div>
 
 					<div className="column">
@@ -240,7 +239,7 @@ function Footer() {
 				<div className="columns is-multiline">
 					<div className="column is-4-desktop is-6-tablet is-12-mobile">
 						<h3 className="is-size-4 mb-4">NeedSleep OU</h3>
-						<p>We are an outsourcing partner for modern software delivery. Our team handles end‑to‑end development, rigorous testing (automation, manual, acceptance), and DevOps—Kubernetes, Terraform, and CI/CD—so your product ships faster with higher reliability.</p>
+						<p>We are an outsourcing partner for modern software delivery. Our team handles end-to-end development, rigorous testing (automation, manual, acceptance), and DevOps—Kubernetes, Terraform, and CI/CD—so your product ships faster with higher reliability.</p>
 					</div>
 
 					<div className="column is-3-desktop is-offset-5-desktop is-6-tablet is-12-mobile">
